@@ -23,7 +23,6 @@ public class javaConnMongo{
 
                 MongoCollection<Document> collection = mongoDatabase.getCollection("student_accuracy");
                 System.out.println("集合 student_accuracy 选择成功");
-                //插入文档
                 /**
                  * 1. 创建文档 org.bson.Document 参数为key-value的格式
                  * 2. 创建文档集合List<Document>
@@ -44,6 +43,7 @@ public class javaConnMongo{
                 //isodate时间比本地时间早8hour
                     documents.add(document);
                 }
+                //插入文档,一次性插入
                 collection.insertMany(documents);
 
         }catch(Exception e){
