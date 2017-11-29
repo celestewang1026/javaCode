@@ -26,7 +26,8 @@ public class javaConnMongo{
                 /**
                  * 1. 创建文档 org.bson.Document 参数为key-value的格式
                  * 2. 创建文档集合List<Document>
-                 * 3. 将文档集合插入数据库集合中 mongoCollection.insertMany(List<Document>) 插入单个文档可以用 mongoCollection.insertOne(Document)
+                 * 3. 将文档集合插入数据库集合中 mongoCollection.insertMany(List<Document>) 插入单个文档可以用
+                 *    mongoCollection.insertOne(Document)
                  * */
                 String sub_set[]={"ENGLISH","MATH","CHINESE"};
                 Random random=new Random();
@@ -43,7 +44,7 @@ public class javaConnMongo{
                 //isodate时间比本地时间早8hour
                     documents.add(document);
                 }
-                //插入文档,一次性插入
+                //插入文档
                 collection.insertMany(documents);
 
         }catch(Exception e){
